@@ -1,9 +1,14 @@
 import React from 'react';
+import ServerList from '../ServerList';
 import { Grid } from './styles';
 
-// minuto 27:80
+// minuto 40:10
 const Layout = () => {
-	return <Grid />;
+	return (
+		<Grid>
+			<ServerList />
+		</Grid>
+	);
 };
 
 export default Layout;
