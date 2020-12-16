@@ -6,7 +6,7 @@ import ServerButton from '../ServerButton';
 import { Container, Separator } from './styles';
 
 const ServerList = () => {
-	const [buttonSelected, setButtonSelected] = useState<number>(0);
+	const [buttonSelected, setButtonSelected] = useState<number>(1);
 
 	const handleButtonSelected = (value: number) => setButtonSelected(value);
 

@@ -61,7 +61,7 @@ export const Column = styled.div<ColumnProps>`
 	background-color: ${({ selected, hoverColumnActive }) =>
 		selected || hoverColumnActive ? '#fff' : ''};
 	border-radius: 0px 4px 4px 0px;
-	margin: 0px 0px 0px -4px;
-	align-self: ${({ hoverColumnActive }) => (hoverColumnActive ? 'center' : 'flex-start')};
-	transition: 0.8s;
+	margin: -6px 0px 0px -4px;
+	align-self: center;
+	transition: 0.5s;
 `;
