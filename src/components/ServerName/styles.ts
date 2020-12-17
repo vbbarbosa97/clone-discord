@@ -1,4 +1,11 @@
-import { MenuList, MenuListProps, Typography, TypographyProps } from '@material-ui/core';
+import {
+	MenuList,
+	MenuListProps,
+	Popper,
+	PopperProps,
+	Typography,
+	TypographyProps,
+} from '@material-ui/core';
 import styled from 'styled-components';
 
 interface ItemProps {
@@ -28,7 +35,7 @@ export const Title = styled(Typography)<TypographyProps>`
 export const Menu = styled(MenuList)<MenuListProps>`
 	background-color: #18191c;
 	border-radius: 4px;
-	width: 250px;
+	width: 220px;
 `;
 
 export const Item = styled.div<ItemProps>`
@@ -69,4 +76,8 @@ export const Separator = styled.div`
 	border-bottom: 1px solid #36393f;
 	align-self: center;
 	margin: 4px 12px;
+`;
+
+export const MenuContainer = styled(Popper)<PopperProps>`
+	margin: 10px 155px 0px 0px;
 `;

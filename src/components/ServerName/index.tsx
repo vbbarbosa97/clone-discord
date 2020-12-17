@@ -11,7 +11,7 @@ import {
 	PersonAdd,
 } from '@material-ui/icons';
 import React, { useRef, useState } from 'react';
-import { Container, Item, Menu, Title, NameItem, Separator } from './styles';
+import { Container, Item, Menu, MenuContainer, NameItem, Separator, Title } from './styles';
 
 const ServerName = () => {
 	const [open, setOpen] = useState<boolean>(false);
@@ -21,6 +21,16 @@ const ServerName = () => {
 	const handleToggle = () => {
 		setOpen((prevOpen) => !prevOpen);
 	};
+
+	document.addEventListener(
+		'click',
+		() => {
+			if (open) {
+				setOpen(false);
+			}
+		},
+		true
+	);
 
 	const menuItems = [
 		{
@@ -82,19 +92,25 @@ const ServerName = () => {
 					<ExpandMore fontSize="default" htmlColor="#fff" />
 				)}
 			</Button>
-			<Popper open={open} anchorEl={anchorRef.current} role={undefined} transition disablePortal>
+			<MenuContainer
+				open={open}
+				anchorEl={anchorRef.current}
+				role={undefined}
+				transition
+				disablePortal
+			>
 				<Menu>
 					{menuItems.map((item, index) => (
-						<>
+						<div key={index.toString() + item.nome}>
 							<Item iconColor={item.iconColor} nameColor={item.nameColor}>
 								<NameItem>{item.nome}</NameItem>
 								{item.icone}
 							</Item>
 							{index === 0 || index === 1 || index === 3 || index === 5 ? <Separator /> : null}
-						</>
+						</div>
 					))}
 				</Menu>
-			</Popper>
+			</MenuContainer>
 		</Container>
 	);
 };
