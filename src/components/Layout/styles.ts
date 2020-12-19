@@ -12,7 +12,7 @@ export const Grid = styled.div`
 	display: grid;
 
 	grid-template-columns: 76px 240px auto 240px;
-	grid-template-rows: 46px auto 52px;
+	grid-template-rows: 48px auto 52px;
 
 	grid-template-areas:
 		'SL SN CI CI'

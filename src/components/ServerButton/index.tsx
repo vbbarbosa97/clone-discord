@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
-import { Button, Column, Container, ContainerButton } from './styles';
 import iconeDiscord from '../../assets/icone_discord.svg';
+import { Button, Column, Container, ContainerButton } from './styles';
 
 export type Props = {
 	isHome?: boolean;
-	mentions?: number;
 	isServer: boolean;
 	nameServer?: string;
 	pathIcon?: string;
@@ -15,7 +14,6 @@ export type Props = {
 
 const ServerButton = ({
 	isHome,
-	mentions,
 	isServer,
 	nameServer,
 	pathIcon,
