@@ -15,7 +15,7 @@ interface ItemProps {
 
 export const Container = styled.div`
 	grid-area: SN;
-	background-color: #292b2f;
+	background-color: #2f3136;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
