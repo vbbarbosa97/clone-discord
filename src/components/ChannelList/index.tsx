@@ -1,17 +1,39 @@
 import React, { useState } from 'react';
 
-import { Category, Container, IconCategory, TitleCategory } from './styles';
+import {
+	Category,
+	Container,
+	ContentCategory,
+	IconCategory,
+	Title,
+	TitleCategory,
+	TitleContainer,
+	Symbol,
+} from './styles';
 
 const ChannelList = () => {
-	const [expanded, setExpanded] = useState<boolean>(false);
+	const [expandedCategoryText, setExpandedCategoryText] = useState<boolean>(false);
+	const [expandedCategoryVoice, setExpandedCategoryVoice] = useState<boolean>(false);
 
-	const handleCategory = () => setExpanded(!expanded);
+	const handleCategoryText = () => setExpandedCategoryText(!expandedCategoryText);
+	const handleCategoryVoice = () => setExpandedCategoryVoice(!expandedCategoryVoice);
 
 	return (
 		<Container>
-			<Category onClick={handleCategory}>
-				<IconCategory expanded={expanded} htmlColor="#8e9297" />
+			<Category onClick={handleCategoryText}>
+				<IconCategory expanded={expandedCategoryText} htmlColor="#8e9297" />
 				<TitleCategory>CANAIS DE TEXTO</TitleCategory>
+			</Category>
+			<ContentCategory>
+				<TitleContainer>
+					<Symbol>#</Symbol>
+					<Title>geral</Title>
+				</TitleContainer>
+			</ContentCategory>
+
+			<Category onClick={handleCategoryVoice}>
+				<IconCategory expanded={expandedCategoryVoice} htmlColor="#8e9297" />
+				<TitleCategory>CANAIS DE VOZ</TitleCategory>
 			</Category>
 		</Container>
 	);

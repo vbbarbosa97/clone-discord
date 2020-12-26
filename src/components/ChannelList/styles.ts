@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { ArrowForwardIos } from '@material-ui/icons';
+import { ArrowForwardIos, PersonAdd } from '@material-ui/icons';
 import { IconProps } from '@material-ui/core';
 
 interface IconCategoryProps extends IconProps {
@@ -42,4 +42,30 @@ export const TitleCategory = styled.h2`
 	color: #8e9297;
 `;
 
-export const ContentCategory = styled.div``;
+export const ContentCategory = styled.div`
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+`;
+
+export const TitleContainer = styled.div`
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+`;
+
+export const Symbol = styled.div`
+	padding-right: 8px;
+	color: #72767d;
+	font-size: 20px;
+	font-weight: inherit;
+`;
+
+export const Title = styled.div`
+	font-weight: bold;
+	font-size: 14px;
+	font-family: Roboto;
+	color: #fff;
+`;
+
+// export const Icon
