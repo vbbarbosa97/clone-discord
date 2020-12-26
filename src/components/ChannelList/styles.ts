@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { ArrowForwardIos, PersonAdd } from '@material-ui/icons';
+import { ArrowForwardIos, PersonAdd, VolumeUp } from '@material-ui/icons';
 import { IconProps } from '@material-ui/core';
 
 interface IconCategoryProps extends IconProps {
@@ -42,10 +42,19 @@ export const TitleCategory = styled.h2`
 	color: #8e9297;
 `;
 
-export const ContentCategory = styled.div`
+export const ContentCategoryChannelText = styled.div`
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+	align-items: center;
+	background-color: rgba(79, 84, 92, 0.32);
+	padding: 4px 8px;
+	border-radius: 4px;
+	margin: 4px 8px;
+
+	&:hover {
+		cursor: pointer;
+	}
 `;
 
 export const TitleContainer = styled.div`
@@ -68,4 +77,36 @@ export const Title = styled.div`
 	color: #fff;
 `;
 
-// export const Icon
+export const IconCreateInvitation = styled(PersonAdd)<IconProps>`
+	color: #b9bbbe;
+
+	&.MuiSvgIcon-root {
+		height: 18px;
+		width: 18px;
+	}
+`;
+
+export const ContentCategoryChannelVoice = styled.div`
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	padding: 4px 8px;
+	border-radius: 4px;
+	margin: 4px 8px;
+
+	&:hover {
+		background-color: rgba(79, 84, 92, 0.32);
+		cursor: pointer;
+	}
+`;
+
+export const IconSound = styled(VolumeUp)<IconProps>`
+	color: #72767d;
+	padding-right: 8px;
+	
+	&.MuiSvgIcon-root {
+		height: 32px;
+		width: 32px;
+	}
+`;

@@ -3,12 +3,15 @@ import React, { useState } from 'react';
 import {
 	Category,
 	Container,
-	ContentCategory,
+	ContentCategoryChannelText,
 	IconCategory,
 	Title,
 	TitleCategory,
 	TitleContainer,
 	Symbol,
+	IconCreateInvitation,
+	IconSound,
+	ContentCategoryChannelVoice,
 } from './styles';
 
 const ChannelList = () => {
@@ -24,17 +27,30 @@ const ChannelList = () => {
 				<IconCategory expanded={expandedCategoryText} htmlColor="#8e9297" />
 				<TitleCategory>CANAIS DE TEXTO</TitleCategory>
 			</Category>
-			<ContentCategory>
-				<TitleContainer>
-					<Symbol>#</Symbol>
-					<Title>geral</Title>
-				</TitleContainer>
-			</ContentCategory>
+			{expandedCategoryText && (
+				<ContentCategoryChannelText>
+					<TitleContainer>
+						<Symbol>#</Symbol>
+						<Title>geral</Title>
+					</TitleContainer>
+					<IconCreateInvitation />
+				</ContentCategoryChannelText>
+			)}
 
-			<Category onClick={handleCategoryVoice}>
+			<Category onClick={handleCategoryVoice} style={{ marginTop: 16 }}>
 				<IconCategory expanded={expandedCategoryVoice} htmlColor="#8e9297" />
 				<TitleCategory>CANAIS DE VOZ</TitleCategory>
 			</Category>
+
+			{expandedCategoryVoice && (
+				<ContentCategoryChannelVoice>
+					<TitleContainer>
+						<IconSound />
+						<Title style={{color: '#72767d'}}>Geral</Title>
+					</TitleContainer>
+					<IconCreateInvitation />
+				</ContentCategoryChannelVoice>
+			)}
 		</Container>
 	);
 };
