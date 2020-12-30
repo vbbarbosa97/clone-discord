@@ -1,4 +1,4 @@
-import { Button, Popper } from '@material-ui/core';
+import { Button } from '@material-ui/core';
 import {
 	Build,
 	CheckBoxOutlineBlank,
@@ -8,7 +8,7 @@ import {
 	ExpandMore,
 	FlashOn,
 	Notifications,
-	PersonAdd,
+	PersonAdd
 } from '@material-ui/icons';
 import React, { useRef, useState } from 'react';
 import { Container, Item, Menu, MenuContainer, NameItem, Separator, Title } from './styles';

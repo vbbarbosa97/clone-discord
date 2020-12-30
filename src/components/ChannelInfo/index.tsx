@@ -39,7 +39,7 @@ const ChannelInfo = () => {
 					<Inbox htmlColor="#b9bbbe" />
 				</IconButton>
 				<IconButton>
-					<Help htmlColor="#43b581" />
+					<Help htmlColor="#b9bbbe" />
 				</IconButton>
 			</ActionsContainer>
 		</Container>

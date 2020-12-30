@@ -49,7 +49,7 @@ export const Button = styled.button<ButtonProps>`
 		border-radius: 30%;
 	}
 
-	img {
+	> img {
 		width: 34px;
 		height: 30px;
 	}
