@@ -7,7 +7,6 @@ interface UserProps {
 export const Container = styled.div`
 	grid-area: UL;
 	background-color: #2f3136;
-	/* padding: 0px 16px; */
 	overflow-y: scroll;
 
 	::-webkit-scrollbar {
