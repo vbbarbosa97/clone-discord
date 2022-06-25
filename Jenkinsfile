@@ -16,10 +16,5 @@ pipeline {
                 sh 'npm run build'
             }
         }
-        stage('PM2 Start') {
-            steps {
-                sh 'pm2 serve build 8082 --spa --name discord'
-            }
-        }
     }
 }
