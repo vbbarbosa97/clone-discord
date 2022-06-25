@@ -79,7 +79,7 @@ const ServerName = () => {
 
 	return (
 		<Container>
-			<Title>Meu Servidor123</Title>
+			<Title>Meu Servidor</Title>
 			<Button
 				ref={anchorRef}
 				aria-controls={open ? 'menu-list-grow' : undefined}
